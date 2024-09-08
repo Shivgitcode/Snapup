@@ -1,5 +1,4 @@
 import Image from "next/image";
-
 export default function HeroSection() {
     return (
         <div className="flex flex-col mx-5 px-4 mt-5">
@@ -18,7 +17,6 @@ export default function HeroSection() {
             </div>
             <div className="relative w-[400px] h-[300px] mt-8 mx-auto mb-8">
                 <Image src={"/monitor.png"} alt="hello" fill objectFit="cover" objectPosition="center"></Image>
-
             </div>
         </div>
     )

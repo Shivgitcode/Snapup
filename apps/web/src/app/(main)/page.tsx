@@ -1,9 +1,15 @@
-import Landing from "@/Components/Hero";
+import About from "@/Components/About";
+import Footer from "@/Components/Footer";
+import Hero from "@/Components/Hero";
+import StatusPage from "@/Components/StatusPage";
 
 export default function Home() {
     return (
         <div>
-            <Landing></Landing>
+            <Hero></Hero>
+            <About></About>
+            <StatusPage></StatusPage>
+            <Footer></Footer>
         </div>
     )
 }
