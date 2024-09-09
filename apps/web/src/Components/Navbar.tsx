@@ -9,16 +9,16 @@ export default function Navbar() {
     const value = { close: { opacity: 0, y: -200 }, open: { opacity: 1, y: 0 } }
     const handleNav = () => { }
     return (
-        <div className='w-full py-3 px-5 flex justify-between items-center '>
+        <div className='w-full py-3 px-5 flex justify-between items-center'>
             <div>
                 <h1 className="text-white font-bold text-[20px]">SnapUp</h1>
             </div>
 
-            <div onClick={() => setShow(true)} className=" cursor-pointer">
+            <div onClick={() => setShow(true)} className=" cursor-pointer sm:hidden ">
                 <LuAlignJustify color="white" fontSize={30}></LuAlignJustify>
             </div>
 
-            <motion.div variants={value} initial={false} animate={show ? "open" : "close"} className="absolute top-3 w-[92%] mx-auto bg-white p-10 rounded-lg">
+            <motion.div variants={value} initial={false} animate={show ? "open" : "close"} className="absolute top-3 w-[92%] mx-auto bg-white p-10 rounded-lg sm:hidden">
                 <button className="absolute top-3 right-5" onClick={() => setShow(false)} ><RxCross1 fontSize={25}></RxCross1></button>
                 <div className="flex flex-col items-center gap-3 mt-5">
                     <button className=" bg-main font-bold text-white w-full p-2 rounded ">Register</button>
@@ -26,6 +26,11 @@ export default function Navbar() {
                 </div>
 
             </motion.div>
+            <div className="hidden sm:flex">
+                <button className="font-semibold text-white">Log in</button>
+                <button className=" font-semibold text-white bg-[#4b5563] rounded-md py-[8px] px-[16px] ml-[24px]">Register</button>
+
+            </div>
 
         </div>
     )
